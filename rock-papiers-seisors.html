@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock-paper-scissors</title>
+</head>
+<body>
+<style>
+  body{
+    background-color: blue;
+    text-align: center;
+  }
+  button{
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    border-radius:800px;
+  color: black;
+  background-color: yellow;
+  margin-top: 100px;
+  margin-left: 180px;
+  }
+  .class{
+    display: block;
+  }
+      </style>
+          <h1>Rock-paper-scissors</h1>
+        <p class="button-round">
+        <button onclick="playergame('rock')">rock</button> 
+  <button onclick="playergame('scissors')">scissors</button>
+  <button onclick="playergame('paper')">paper</button>
+  <button onclick="playergame('rest')">rest</button>
+  <audio id="win-sound" src="https://www.myinstants.com/media/sounds/applause.mp3" preload="auto"></audio>
+  <audio id="lose-sound" src="https://www.myinstants.com/media/sounds/sad_trombone.mp3" preload="auto"></audio> <!-- Nouveau son -->
+  <audio id="tie-sound" src="https://www.myinstants.com/media/sounds/ding-sound-effect_2.mp3" preload="auto"></audio>
+</p>
+  <script> 
+  const score ={
+    win:0,loses:0,ties:0
+  }
+ let computerMove = ''
+    function pickcomputerMove (){  
+      let  randomNumber= Math.random()
+  console.log(randomNumber)
+  if (randomNumber >=0 && randomNumber<1/3)
+  computerMove = 'rock';
+  else if  (randomNumber >= 1/3 && randomNumber<2/3)
+  computerMove='paper';
+  else
+  if (randomNumber> 2/3 && randomNumber<1)
+  computerMove='scissors';
+  console.log(computerMove)
+    }
+    let result=''
+    function playergame (playerMove){
+      if( playerMove === 'rest') {
+  score.win = 0;
+  score.loses = 0;
+  score.ties = 0;
+  alert("Score reset!");
+  return;
+      }
+        pickcomputerMove();
+        if( playerMove ==='scissors'){
+        if (computerMove === 'rock')
+      result='You R lose!'
+        else if (computerMove ==='scissors')
+        result='Tie!';
+      else if (computerMove ==='paper')
+      result='You R win!';
+        }
+      else if (playerMove==='rock'){
+        if (computerMove === 'rock')
+        result='Tie!';
+          else if (computerMove ==='scissors')
+          result='You R win!';
+        else if (computerMove ==='paper')
+        result='You R lose!';
+      }
+        else
+        if  (playerMove==='paper') {
+              if (computerMove === 'rock')
+      result='You R win!';
+        else if (computerMove ==='scissors')
+        result='You R lose!';
+      else if (computerMove ==='paper')
+      result='Tie!';
+        }
+        if (result ==='You R win!'){
+          score.win++
+          document.getElementById("win-sound").play()
+        }
+        else if(result==='You R lose!'){
+          score.loses++
+          document.getElementById("lose-sound").play();
+        }
+        else if (result==='Tie!'){
+          score.ties++
+          document.getElementById("tie-sound").play();
+        }
+  alert (`You picked ${playerMove}. Computer picked ${computerMove}.${result}.
+  win : ${score.win}, loses : ${score.loses}, ties : ${score.ties}`)
+      }
+    </script>
+</body>
+</html>

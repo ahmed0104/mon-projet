@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exo</title>
+</head>
+<body>
+  <script>
+   /* function greet(name) {
+      if (name ===undefined )
+      console.log ('hi there!')
+    else
+   console.log (`hello ${name}!`)
+    }
+    greet ('ahmed');
+    greet ('ziloukha');
+    greet ('aissa');
+    greet ();*/
+    function convertfernhit(fernhit){
+    return (fernhit-32)*5/9
+    }
+    function convertcelsius(celsius){
+    return (celsius*9/5)+32
+    }
+    function convertTemperature(unit,degree){
+   if (unit === 'C') {
+    const result = convertfernhit(degree)
+    return `${result}F`  ;
+   }
+    else if  (unit === 'F'){
+       const result = convertcelsius(degree)
+    return `${result}C`;
+    }
+  }
+    console.log(convertTemperature(25,'F'))
+    console.log(convertTemperature(77,'C'))
