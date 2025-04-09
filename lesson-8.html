@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="css/bootstrap.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock-paper-scissors</title>
@@ -31,31 +30,16 @@
           </h1>
         </p> 
         <p class="button-round">
-        <button onclick ="playergame('rock')">rock</button> 
-  <button onclick ="playergame('scissors')">scissors</button>
-  <button onclick ="playergame('paper')">paper</button>
-  <button onclick="
-  score.win=0
-  score.losses=0
-  score.ties=0"> reset score 
-  </button>
+        <button onclick="playergame('rock')">rock</button> 
+  <button onclick="playergame('scissors')">scissors</button>
+  <button onclick="playergame('paper')">paper</button>
 </p>
-
 <audio id="win-sound" src="https://www.myinstants.com/media/sounds/applause.mp3"></audio>
-<audio id="lose-sound" src="https://www.myinstants.com/media/sounds/sad_trombone.mp3" preload="auto"></audio> 
-<audio id="tie-sound" src="https://www.myinstants.com/media/sounds/ding-sound-effect_2.mp3" preload="auto"></audio>
-
+<audio id="lose-sound" src="https://www.myinstants.com/media/sounds/fail-trombone.mp3"></audio>
+<audio id="tie-sound" src="https://www.myinstants.com/media/sounds/ding.mp3"></audio>
 <img src="fist.png" alt="" height="50px" width="30px">
-
-
 <h2>hello world</h2>
-<script src="popper.min.js"></script>
-<script src="jquery-3.7.1.min.js"></script>
-  <script src="js/bootstrap.js"> 
-
-
-
-
+  <script> 
   const score ={
     win : 0,
     losses : 0,
@@ -76,12 +60,12 @@
     }
     let result=''
     function playergame (playerMove ='scissors'){
-     /* if (pickcomputerMove==='rest'){
+      if (pickcomputerMove==='rest'){
         score.win=0
         score.loses=0
         score.ties=0
         return;
-        */
+      }
         pickcomputerMove();
         if( playerMove ==='scissors'){
         if (computerMove === 'rock')
@@ -121,30 +105,9 @@
         document.getElementById("tie-sound").play();
     }
       console.log(score)
-      alert (`You picked ${playerMove}. Computer picked ${computerMove}.${result}.
-    win : ${score.win} 🏆✅ loses : ${score.losses} ❌😞 ties : ${score.ties} 🤝⚖️`)
+      alert (`You picked ${playerMove}. Computer picked ${computerMove}.${result}.`)
       }
-
-
-
-
-
-    const product2 = {
-      name : 'watches',
-      ['deleviry-time']:'01 day',
-      noting :{
-        stars : 4.8,
-        cout : 90
-      },
-      fun : function (hi) {
-        console.log ('function inside objects')
-      }
-    }
-    console.log(product2['name'])
-      console.log(product2.name)
-      console.log(product2['deleviry-time'])
-      console.log(product2.noting.stars)
-    product2.fun();
+      
     </script>
 </body>
 </html>
