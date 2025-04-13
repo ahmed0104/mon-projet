@@ -1,46 +1,205 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portrait animé</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.1); /* fond sombre avec opacité */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .img-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      border-radius: 12px;
+    <meta charset="UTF-8">
+    <title>شركات الطيران</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff;
+            direction: rtl;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: darkblue;
+            color: white;
+            padding: 10px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .airplane-image {
+            margin: 40px 0;
+        }
+
+        .airplane-image img {
+            width: 300px;
+        }
+
+        .airlines {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .airline {
+            background-color: white;
+           border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 250px;
+            margin: 5px;
+            padding: 20px;
+            
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+           
+            transition: 0.3s;
+        }
+
+        .airline:hover {
+            transform: scale(1.05);
+        }
+
+        .airline a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: beige;
+            color: white;
+            padding: 20px 0;
+            margin-top: 10px;
+        }
+
+        .contact-form {
+            max-width: 300px;
+            margin: auto;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 5px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            background-color: #0077cc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #005fa3;
+        }
+        .social-icons {
+            margin-top: 20px;
+            text-align: left; /* icons on the left */
+            padding-left: 30px;
+        }
+
+        .social-icons a {
+            color: black; /* black icons */
+            margin: 0 10px;
+            font-size: 22px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #555;
+        }
+        .sidebar {
+      position: fixed;
+      top: 27%;
+      right: 0;
+      transform: translateY(-50%);
+      background-color: #004080;
+      padding: 10px 5px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      z-index: 999;
     }
 
-    .img-container img {
-      width: 400px;
-      height: 400px;
-      object-fit: cover;
-      filter: grayscale(1);
-      transition:
-        transform 750ms ease-out,
-        filter 250ms ease-out;
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      margin: 8px 0;
+      font-size: 20px;
+      transition: all 0.3s ease;
+      text-align: center;
     }
-     .img-container img:hover {
-      transform: scale(1.1);
-      filter: grayscale(0);
+
+    .sidebar a:hover {
+      background-color: #0077cc;
+      transform: translateX(-5px);
+      border-radius: 6px;
     }
-  </style>
+
+    .sidebar a i {
+      display: block;
+      margin-bottom: 5px;
+    }
+    </style>
 </head>
 <body>
-  <div class="img-container">
-    <img src="abdessalam1.jpg" alt="Portrait 1">
-    <img src="abdessalam2.jpg" alt="Portrait 2">
-    <img src="abdesssaem.jpg" alt="Portrait 3">
-  </div>
+
+<header>
+    <h1>روابط شركات الطيران</h1>
+</header>
+
+<!-- صورة الطيارة في الوسط -->
+<div class="airplane-image">
+    <img src="avion.jpg" alt="طيارة">
+</div>
+<div class="sidebar">
+  <a href="#"><i class="fas fa-home"></i>الرئيسية</a>
+  <a href="#contact"><i class="fas fa-envelope"></i>تواصل</a>
+  <a href="#airlines"><i class="fas fa-plane"></i>الطيران</a>
+</div>
+
+<!-- روابط شركات الطيران -->
+<div class="airlines">
+    <div class="airline">
+        <a href="https://www.qatarairways.com/ar" target="_blank">الخطوط الجوية القطرية</a>
+    </div>
+    <div class="airline">
+        <a href="https://www.emirates.com/ar" target="_blank">طيران الإمارات</a>
+    </div>
+    <div class="airline">
+        <a href="https://www.saudia.com/" target="_blank">الخطوط الجوية السعودية</a>
+    </div>
+    <div class="airline">
+        <a href="https://www.flydubai.com/ar" target="_blank">فلاي دبي</a>
+    </div>
+    <div class="airline">
+        <a href="https://www.airarabia.com/ar" target="_blank">العربية للطيران</a>
+    </div>
+        <div class="airline">
+          <a href="https://www.airpaz.com/en/airlines/AH-Air-Algerie?a=20507685800&b=158658206288&d=c&l=9073629&n=g&p=&t=kwd-2242952455327&utm_medium=cpc&utm_source=gads&gad_source=1&gclid=CjwKCAjwwe2_BhBEEiwAM1I7sVkukj8t321pXHoNTUEA-mzvLwjidXs2S-Z0h8U2tkQB3efnVdq8ZhoCAscQAvD_BwE" target="_blank">الخطوط الجوية الجزائرية </a>
+        </div>
+</div>
+<!-- قسم التواصل -->
+<footer>
+    <h2>تواصل معنا</h2>
+    <div class="contact-form">
+        <input type="text" placeholder="الاسم الكامل">
+        <input type="email" placeholder="البريد الإلكتروني">
+        <textarea rows="4" placeholder="اكتب رسالتك هنا"></textarea>
+        <button>إرسال</button>
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+</footer>
+
 </body>
 </html>
