@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portrait animé</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.1); /* fond sombre avec opacité */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .img-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      border-radius: 12px;
+    }
+
+    .img-container img {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      filter: grayscale(1);
+      transition:
+        transform 750ms ease-out,
+        filter 250ms ease-out;
+    }
+     .img-container img:hover {
+      transform: scale(1.1);
+      filter: grayscale(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="img-container">
+    <img src="abdessalam1.jpg" alt="Portrait 1">
+    <img src="abdessalam2.jpg" alt="Portrait 2">
+    <img src="abdesssaem.jpg" alt="Portrait 3">
+  </div>
+</body>
+</html>

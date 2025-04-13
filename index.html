@@ -1,146 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>bootstrap-work</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <title>بطاقة بذور الخير </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <style>
+    .card-body {
+      text-align: right; /* محاذاة النص داخل محتوى البطاقة إلى اليمين */
+    }
+
+    #slide {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  z-index: 1000;
+  width: 250px; /* Largeur du carrousel */
+  height: 200px; /* Hauteur du carrousel */
+  overflow: hidden; /* Cache les parties de l'image qui dépassent */
+}
+.carousel-inner {
+  height: 100%; /* S'assure que le carrousel occupe toute la hauteur */
+}
+.carousel-item img {
+  width: 100%; /* L'image s'étend sur toute la largeur du carrousel */
+  height: 100%; /* L'image occupe toute la hauteur du carrousel */
+  object-fit: contain; /* L'image s'ajuste sans être coupée, tout en gardant son ratio */
+}
+  </style>
 </head>
-<body class="d-flex justify-content-center align-items-center bg-light">
-<!--
-<body class="bg-dark">
-  
-<div class="container">
-<div class="row align-items-center" style="height: 200px; background-color: aqua;">
-  <div class="col-3 align-self-end">test1</div>
-  <div class="col-3">test2</div>
-  <div class="col-3">test3</div>
-  <div class="col-3">test4</div>
-</div>
-</div>
-
-
-<div class="row justify-content-between" style="height: 300px; width: 2000x;">
-  <div class="col-3 align-self-end">test1</div>
-  <div class="col-3">test2</div>
-  
-</div>
-
-<div class="btn btn-outline-primary">click</div>
-<div class="alert alert-warning">warning ! this is dangerous!</div>
-<div class="alert alert-success">warning
- ! this is dangerous!</div>
-
-
-
- <div class="alert alert-dark">warning ! this is dangerous!</div>
-<h1 class="text-primary"> ahmed</h1>
-<h1 class="text-success"> ahmed</h1>
-<h1 class="text-darger"> ahmed</h1>
-<h1 class="text-secandery"> ahmed</h1>
-<h1 class="text-dark"> ahmed</h1>
-<h1 class="text-info"> ahmed</h1>
-<h1 class="text-warning"> ahmed</h1>
-<h1 class="text-light"> ahmed</h1>
-
-
-  <script src="popper.min.js"></script>
-  <script src="jquery-3.7.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-
-  <div class="btn-tollbar ">
-  <div class="btn-group btn-group-lg">
-  <div class="btn btn-secondary">1</div>
-  <div class="btn btn-secondary">2</div>
-  <div class="btn btn-secondary">3</div>
-  <div class="btn btn-secondary">4</div>
-</div>
-<br>
-<br>
-<div class="btn-group btn-group-lg">
-  <div class="btn btn-secondary">5</div>
-  <div class="btn btn-secondary">6</div>
-  <div class="btn btn-secondary">7</div>
-  <div class="btn btn-secondary">8</div>
-</div>
-<br>
-<br>
-<div class="btn-group btn-group-lg">
-  <div class="btn btn-secondary">9</div>
-  <div class="btn btn-secondary">+</div>
-  <div class="btn btn-secondary">-</div>
-  <div class="btn btn-secondary">*</div>
-</div>
-</div>
-
-  <div class="row bg-dark">
-    <div class="col-8 m-1   ">
-      <div class="btn btn-secondary">left
+<body class="bg-dark d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+  <div class="card border shadow-sm bg-info bg-opacity-11" style="max-width: 500px;">
+    <img src="بذور الخير2.png" class="w-75 d-block mx-auto mt-3 shadow rounded" alt="بذور الخير">
+    <div class="card-body">
+      <h1 class="card-title text-center">بذور الخير</h1>
+      <div class="card-text">
+        <p><strong>اللجنة الثقافية:</strong> لمكتب آل العطف بوهران</p>
+        <p><strong>تاريخ التأسيس:</strong> 2024</p>
+        <p><strong>الهدف:</strong> نهدف إلى تنظيم نشاطات ترفيهية متنوعة تشمل المنابر الحرة والألعاب الموجهة للأطفال، بهدف تنميتهم وتعزيز معارفهم. هذه الأنشطة تهدف إلى تحفيزهم على الت فوق الدراسي، ورفع مستوى تحصيلهم الأكاديمي، مما يسهم في تطوير مهاراتهم بشكل عام.</p>
       </div>
-    </div>
-    <div class="col-1 m-1">
-    <div class="btn btn-secondary">right
+    <div class="card-footer d-flex justify-content-between flex-wrap bg-white">
+      <div class="d-flex gap-2">
+        <button class="btn btn-success btn-sm" onclick="window.location.href='file:///C:/Users/BAHMED/Desktop/  build%20website%20from%20html%20css%20javascript/slide.html'">النشاطات</button>
+        <button class="btn btn-primary btn-sm">المكان</button>
+      </div>
+      <div class="d-flex gap-2">
+        <button class="btn btn-info btn-sm">المؤطرين</button>
+        <button class="btn btn-warning btn-sm">قسم الإعلام</button>
+      </div>
+
+      <div class="w-100 mt-2">
+        <button class="btn btn-outline-dark w-100">اضغط هنا</button>
+      </div>
     </div>
   </div>
-    <div class="col-2 m-1">
-      <div class="btn btn-secondary">right
-        </div>
-      </div>
-     </div>
-     <br>
+</div>
+<div id="slide" class="carousel slide container w-25" data-bs-ride="carousel" data-bs-interval="2500">
 
-      <div class="row bg-dark">
-        <div class="col text-center mt-1">
-          <div class="btn btn btn-secondary">center
-          </div>
-        </div>
-      </div>
-      <br>
+  <!-- Indicateurs sous forme de <ol><li> -->
+  <ol class="carousel-indicators">
+    <li data-bs-target="#slide" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#slide" data-bs-slide-to="1"></li>
+    <li data-bs-target="#slide" data-bs-slide-to="2"></li>
+  </ol>
 
-          <div class="row bg-dark">
-            <div class="col m-1 text-left">
-              <div class="btn btn-secondary text-left">left
-              </div>
-            </div>
-              <div class="col m-1 text-center">
-              <div class="btn btn btn-secondary">center 
-              </div>
-              </div>
-            <div class="col m-1 text-right">
-            <div class="btn btn-secondary text right">right
-            </div>
-          </div>
-      </div>
-        -->
-      <div class="card border shadow-sm" style="max-width: 400px;">
-        <img src="بذور الخير2.png"class="card-img w-30 top d-block mx-auto top bottom d-block" >
-        <div class="card-body ">
-          <h1 class="card-title text-center">بذور الخير</h1>
-          <div class="card-text" style="text-align: right;" dir="rtl">
-            <p><strong>اللجنة الثقافية :</strong> لمكتب آل العطف بوهران</p>
-            <p><strong>تاريخ التأسيس:</strong> 2024</p>
-            <p><strong>الهدف:</strong> ترفيه الأطفال الصغار بعد حصولهم على معدل جيد في امتحانات الموسم الدراسي
-          </div>
-          <div class="btn btn-outline-dark">Click</div>
-        </div>
-      </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="26.jpg" class="d-block w-100" alt="Image 0" style="height: 200px;width: 250px;">
+    </div>
+    <div class="carousel-item">
+      <img src="24.jpg" class="d-block w-100" alt="Image 1" style="height: 200px; width: 250px;">
+    </div>
+    <div class="carousel-item">
+      <img src="25.jpg" class="d-block w-100" alt="Image 2" style="height:200px; width: 250px;">
+    </div>
+  </div>
 
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
